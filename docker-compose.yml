@@ -5,11 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: evcxr
-    user: 1000:1000
+    image: docker-jupyter-rust
+    # user: 1000:1000
     working_dir: /scripts
     command: ./start_jupyter.sh
     volumes:
       - ./notebooks:/notebooks
     ports:
-      - 8888:8888
+      - 62323:8888
